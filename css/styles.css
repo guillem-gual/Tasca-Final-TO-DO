@@ -1,8 +1,15 @@
 
+:root {
+    --color-fons: #1A1A1A;
+    --color-text: white;
+    --color-hover: #a32727;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    display: flex;
 }
 
 .barra-lateral {
@@ -10,8 +17,8 @@ body {
     flex-direction: column;
     width: 20%;
     height: 100vh;
-    background-color: #1A1A1A;
-    color: white;
+    background-color: var(--color-fons);
+    color: var(--color-text);
 }
 
 .barra-lateral h1 {
@@ -20,7 +27,7 @@ body {
 }
 
 .barra-lateral a {
-    color: white;
+    color: var(--color-text);
     text-decoration: none;
     padding: 15px 20px;
     margin-inline: 20px;
@@ -29,5 +36,49 @@ body {
 }
 
 .barra-lateral a:hover{
-    background-color: grey;
+    background-color: var(--color-hover);
+}
+
+main {
+    width: 80%;
+    margin: 20px 40px;
+}
+
+.box-crear-tasca {
+    gap: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.box-crear-tasca a {
+    padding: 10px 20px;
+    background-color: var(--color-fons);
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.box-crear-tasca a:hover {
+    background-color: var(--color-hover);
+}
+
+.pujar-tasca input {
+    padding: 10px;
+    margin-right: 10px;
+    border: var(--color-fons) 1px solid;
+    border-radius: 5px;
+    font-size: 12px;
+}
+.pujar-tasca button {
+    padding: 10px 20px;
+    background-color: var(--color-fons);
+    color: var(--color-text);
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.pujar-tasca button:hover {
+    background-color: var(--color-hover);
 }
