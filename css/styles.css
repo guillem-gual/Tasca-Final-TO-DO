@@ -1,0 +1,33 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.barra-lateral {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100vh;
+    background-color: #1A1A1A;
+    color: white;
+}
+
+.barra-lateral h1 {
+    font-size: 24px;
+    padding: 20px;
+}
+
+.barra-lateral a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    margin-inline: 20px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.barra-lateral a:hover{
+    background-color: grey;
+}
