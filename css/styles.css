@@ -64,14 +64,14 @@ main {
     background-color: var(--color-hover);
 }
 
-.pujar-tasca input {
+.input-forms {
     padding: 10px;
     margin-right: 10px;
     border: var(--color-fons) 1px solid;
     border-radius: 5px;
     font-size: 12px;
 }
-.pujar-tasca button {
+.button-negre {
     padding: 10px 20px;
     background-color: var(--color-fons);
     color: var(--color-text);
@@ -80,6 +80,31 @@ main {
     font-size: 12px;
     cursor: pointer;
 }
-.pujar-tasca button:hover {
+.button-negre:hover {
     background-color: var(--color-hover);
+}
+
+#color-categoria {
+    padding: 5px;
+    border: var(--color-fons) 1px solid;
+    border-radius: 5px;
+}
+
+.box-crear-categoria {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#form-crear-categoria {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#form-crear-categoria #nom-categoria {
+    padding: 5px;
+    border: var(--color-fons) 1px solid;
+    border-radius: 5px;
+    font-size: 12px;
 }
