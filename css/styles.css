@@ -1,8 +1,8 @@
-
 :root {
     --color-fons: #3b3b3b;
     --color-text: white;
     --color-hover: #9078df;
+    --color-gris-fons: #ababab;
 }
 
 body {
@@ -35,7 +35,7 @@ body {
     border-radius: 5px;
 }
 
-.barra-lateral a:hover{
+.barra-lateral a:hover {
     background-color: var(--color-hover);
 }
 
@@ -71,6 +71,7 @@ main {
     border-radius: 5px;
     font-size: 12px;
 }
+
 .button-negre {
     padding: 10px 20px;
     background-color: var(--color-fons);
@@ -80,6 +81,7 @@ main {
     font-size: 12px;
     cursor: pointer;
 }
+
 .button-negre:hover {
     background-color: var(--color-hover);
 }
@@ -107,4 +109,24 @@ main {
     border: var(--color-fons) 1px solid;
     border-radius: 5px;
     font-size: 12px;
+}
+
+#categories-llista {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#categories-llista li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--color-gris-fons);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
 }
