@@ -2,7 +2,7 @@
     --color-fons: #3b3b3b;
     --color-text: white;
     --color-hover: #9078df;
-    --color-gris-fons: #ababab;
+    --color-gris-fons: #e6e6e6;
 }
 
 body {
@@ -16,7 +16,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 20%;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     background-color: var(--color-fons);
     color: var(--color-text);
 }
@@ -66,6 +67,7 @@ main {
 
 .input-forms {
     padding: 10px;
+    width: 300px;
     margin-right: 10px;
     border: var(--color-fons) 1px solid;
     border-radius: 5px;
@@ -95,12 +97,16 @@ main {
 .box-crear-categoria {
     display: flex;
     align-items: center;
-    gap: 20px;
+    justify-content: center;
 }
 
 #form-crear-categoria {
     display: flex;
     flex-direction: column;
+    box-shadow: 0px 5px 10px var(--color-fons);
+    border-radius: 15px;
+    background-color: var(--color-gris-fons);
+    padding: 20px;
     gap: 10px;
 }
 
@@ -111,22 +117,42 @@ main {
     font-size: 12px;
 }
 
+.categories {
+    margin-top: 30px;
+}
+
 #categories-llista {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
     margin: 0;
     padding: 0;
-    list-style: none;
 }
 
 #categories-llista li {
     display: flex;
+    width: auto;
+    min-width: 300px;
     align-items: center;
+    justify-content: space-between;
     gap: 10px;
     background-color: var(--color-gris-fons);
-    padding: 10px;
+    box-shadow: 0px 1px 5px var(--color-fons);
+    padding: 20px;
     border-radius: 5px;
     font-size: 18px;
     font-weight: bold;
+}
+
+.mostrar-color {
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    border: var(--color-fons) 1px solid;    
+}
+
+.h1-centrat {
+    text-align: center;
 }

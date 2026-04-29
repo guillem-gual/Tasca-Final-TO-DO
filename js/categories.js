@@ -71,11 +71,7 @@ function carregarCategories() {
             const novaCategoriaElement = document.createElement('li');
 
             const spanColor = document.createElement('span');
-            spanColor.classList.add('color-indicator');
-            spanColor.style.display = 'inline-block';
-            spanColor.style.width = '15px';
-            spanColor.style.height = '15px';
-            spanColor.style.borderRadius = '10px';
+            spanColor.classList.add('mostrar-color');
             spanColor.style.backgroundColor = categoria.color;
             novaCategoriaElement.appendChild(spanColor);
 
