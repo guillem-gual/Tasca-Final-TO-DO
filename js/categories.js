@@ -64,6 +64,10 @@ function carregarCategories() {
     Object.keys(localStorage).forEach(key => {
         const categoria = JSON.parse(localStorage.getItem(key));
 
+        if (!categoria.nom || !categoria.color) {
+            return;
+        }
+
         const llistaCategories = document.getElementById('categories-llista');
         const novaCategoriaElement = document.createElement('li');
 

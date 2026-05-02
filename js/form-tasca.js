@@ -7,6 +7,7 @@ function Tasca(nom, descripcio, data, categoria, prioritat) {
     this.data = data;
     this.categoria = categoria;
     this.prioritat = prioritat;
+    this.completada = false;
 }
 
 document.getElementById('form-crear-tasca').addEventListener('submit', (e) => {
@@ -20,8 +21,6 @@ function guardarTasca() {
     const data = document.getElementById('dataTasca').value;
     const categoria = document.getElementById('categoriaTasca').value;
     const prioritat = document.getElementById('prioritatTasca').value;
-    const tasca = new Tasca(nom, descripcio, data, categoria, prioritat);
-    localStorage.setItem(nom, JSON.stringify(tasca));
 
     if (!nom || !data || !categoria || !prioritat) {
         alert('Omple els camps obligatoris camps obligatoris.');
@@ -30,7 +29,11 @@ function guardarTasca() {
         alert('La data no pot ser anterior a la data actual.');
         return;
     }
-    
+
+    const tasca = new Tasca(nom, descripcio, data, categoria, prioritat);
+
+    localStorage.setItem(nom, JSON.stringify(tasca));
+
     // Buidar camps
     document.getElementById('titolTasca').value = '';
     document.getElementById('descripcioTasca').value = '';
@@ -39,19 +42,24 @@ function guardarTasca() {
     document.getElementById('prioritatTasca').value = '';
 }
 
-function carregarCategoriesFormulari(){
+function carregarCategoriesFormulari() {
 
-    Object.keys(localStorage).forEach(key =>{
+    Object.keys(localStorage).forEach(key => {
+
 
         const categoria = JSON.parse(localStorage.getItem(key));
 
-        const selectCategories = document.getElementById("categoriaTasca");
-        const novaOpcio = document.createElement("option");
+        if (!categoria.nom || !categoria.color) {
+            return;
+        }
 
-        novaOpcio.value = categoria.nom;
-        novaOpcio.textContent = categoria.nom;
+            const selectCategories = document.getElementById("categoriaTasca");
+            const novaOpcio = document.createElement("option");
 
-        selectCategories.appendChild(novaOpcio);
+            novaOpcio.value = categoria.nom;
+            novaOpcio.textContent = categoria.nom;
+
+            selectCategories.appendChild(novaOpcio);
 
     });
 
