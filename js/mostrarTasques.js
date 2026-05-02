@@ -10,8 +10,6 @@ function carregarTasques() {
     tasquesCompletades.innerHTML = '';
 
 
-
-
     Object.keys(localStorage).forEach(key => {
         const tasca = JSON.parse(localStorage.getItem(key));
 
@@ -87,9 +85,15 @@ function carregarTasques() {
         });
         partBaixa.appendChild(btnEliminar);
 
+        tascaElement.style.order = tasca.prioritat === 'Alta' ? 1 : tasca.prioritat === 'Mitja' ? 2 : 3;
+
+
         if (tasca.completada) {
+            tascaElement.style.opacity = '0.5';
+            titol.style.textDecoration = 'line-through';
             tasquesCompletades.appendChild(tascaElement);
         } else {
+            tascaElement.style.order = tasca.prioritat === 'Alta' ? 1 : tasca.prioritat === 'Mitja' ? 2 : 3;
             tasquesPendents.appendChild(tascaElement);
         }
 
