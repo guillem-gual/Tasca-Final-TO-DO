@@ -13,22 +13,20 @@ function crearCategoria() {
     const colorCategoria = document.getElementById('color-categoria').value;
 
     const novaCategoria = new Categoria(nomCategoria, colorCategoria);
-    localStorage.setItem(nomCategoria, JSON.stringify(novaCategoria));
+    
 
     if (!nomCategoria || !colorCategoria) {
         alert('Tots els camps són obligatoris.');
         return;
     }
 
+    localStorage.setItem(nomCategoria, JSON.stringify(novaCategoria));
+
     const llistaCategories = document.getElementById('categories-llista');
     const novaCategoriaElement = document.createElement('li');
 
     const spanColor = document.createElement('span');
-    spanColor.classList.add('color-indicator');
-    spanColor.style.display = 'inline-block';
-    spanColor.style.width = '15px';
-    spanColor.style.height = '15px';
-    spanColor.style.borderRadius = '10px';
+    spanColor.classList.add('mostrar-color');
     spanColor.style.backgroundColor = colorCategoria;
     novaCategoriaElement.appendChild(spanColor);
 
@@ -66,32 +64,30 @@ function carregarCategories() {
     Object.keys(localStorage).forEach(key => {
         const categoria = JSON.parse(localStorage.getItem(key));
 
-        if (categoria && categoria.nom && categoria.color) {
-            const llistaCategories = document.getElementById('categories-llista');
-            const novaCategoriaElement = document.createElement('li');
+        const llistaCategories = document.getElementById('categories-llista');
+        const novaCategoriaElement = document.createElement('li');
 
-            const spanColor = document.createElement('span');
-            spanColor.classList.add('mostrar-color');
-            spanColor.style.backgroundColor = categoria.color;
-            novaCategoriaElement.appendChild(spanColor);
+        const spanColor = document.createElement('span');
+        spanColor.classList.add('mostrar-color');
+        spanColor.style.backgroundColor = categoria.color;
+        novaCategoriaElement.appendChild(spanColor);
 
-            const spanText = document.createElement('span');
-            spanText.textContent = categoria.nom;
-            novaCategoriaElement.appendChild(spanText);
+        const spanText = document.createElement('span');
+        spanText.textContent = categoria.nom;
+        novaCategoriaElement.appendChild(spanText);
 
 
-            const btn = document.createElement('button');
-            btn.textContent = 'Eliminar';
-            btn.classList.add('button-negre');
+        const btn = document.createElement('button');
+        btn.textContent = 'Eliminar';
+        btn.classList.add('button-negre');
 
-            btn.addEventListener('click', () => {
-                localStorage.removeItem(categoria.nom);
-                llistaCategories.removeChild(novaCategoriaElement);
-            });
+        btn.addEventListener('click', () => {
+            localStorage.removeItem(categoria.nom);
+            llistaCategories.removeChild(novaCategoriaElement);
+        });
 
-            novaCategoriaElement.appendChild(btn);
+        novaCategoriaElement.appendChild(btn);
 
-            llistaCategories.appendChild(novaCategoriaElement);
-        }
+        llistaCategories.appendChild(novaCategoriaElement);
     });
 }

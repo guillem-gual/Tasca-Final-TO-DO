@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear Tasca | Projecte Final TO-DO</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <aside class="barra-lateral">
         <h1>MENÚ</h1>
@@ -13,6 +15,39 @@
         <a href="crear-tasca.html">Crear Tasca</a>
         <a href="categories.html">Gestió de Categories</a>
     </aside>
-    
+
+    <main>
+        <h1 class="h1-centrat">Crear nova tasca</h1>
+
+        <section class="box">
+            <form id="form-crear-tasca">
+                <label>Titol:</label>
+                <input class="input-forms" type="text" id="titolTasca" placeholder="Entre el titol de la tasca"
+                    required>
+
+                <label>Descripció:</label>
+                <textarea class="input-forms" id="descripcioTasca" rows="3" cols="50"></textarea>
+
+                <label>Data:</label>
+                <input class="input-forms" type="date" id="dataTasca">
+
+                <label>Categoria:</label>
+                <select class="input-forms" name="Categoria" id="categoriaTasca"></select>
+
+                <label>Prioritat:</label>
+                <select class = input-forms name = "Prioritat" id = "prioritatTasca">
+                    <option value="Alta">Alta</option>
+                    <option value="Mitja">Mitja</option>
+                    <option value="Baixa">Baixa</option>
+                </select>
+
+                <button class="button-negre" type="submit">Crear Tasca</button>
+            </form>
+
+        </section>
+    </main>
+
+    <script src="js/form-tasca.js"></script>
 </body>
+
 </html>
