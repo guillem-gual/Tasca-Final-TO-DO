@@ -4,14 +4,14 @@
     "descripcio": "Carrega activitats externes sense duplicats.",
     "data": "2025-04-22",
     "categoria": { "nom": "Dades", "color": "#81ecec" },
-    "prioritat": "Mitjana"
+    "prioritat": "Mitja"
   },
   {
     "nom": "Gestió de categories a categories.html",
     "descripcio": "Permet afegir i eliminar categories.",
     "data": "2025-04-24",
     "categoria": { "nom": "Funcionalitat", "color": "#00cec9" },
-    "prioritat": "Mitjana"
+    "prioritat": "Mitja"
   },
   {
     "nom": "Separa el projecte en mòduls JavaScript",
