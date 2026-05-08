@@ -4,7 +4,7 @@ function pujarActivitats() {
     console.log('Pujant activitats...');
     const archiuJSON = document.getElementById('nom-fitxer').value;
     fetch("../dades/" + archiuJSON)
-        .then(response => response.json())
+        .then(resposta => resposta.json())
         .then(activitats => {
             const llistaActivitats = document.getElementById('llista-activitats');
             activitats.forEach(activitat => {
@@ -18,7 +18,6 @@ function pujarActivitats() {
                 localStorage.setItem(activitat.nom, JSON.stringify(tasca));
             });
         })
-        .catch(error => console.error('Error carregant les activitats:', error));
 }
 
 document.getElementById('form-pujar-tasca').addEventListener('submit', pujarActivitats);

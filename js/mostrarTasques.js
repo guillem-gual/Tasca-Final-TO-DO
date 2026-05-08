@@ -1,3 +1,4 @@
+import { crearGrafic } from "./grafic.js";
 
 document.addEventListener("DOMContentLoaded", carregarTasques);
 
@@ -9,6 +10,7 @@ function carregarTasques() {
     tasquesPendents.innerHTML = '';
     tasquesCompletades.innerHTML = '';
 
+    const dades = { Gener: 0, Febrer: 0, Març: 0, Abril: 0, Maig: 0, Juny: 0, Juliol: 0, Agost: 0, Setembre: 0, Octubre: 0, Novembre: 0, Desembre: 0 };
 
     Object.keys(localStorage).forEach(key => {
         const tasca = JSON.parse(localStorage.getItem(key));
@@ -92,10 +94,16 @@ function carregarTasques() {
             tascaElement.style.opacity = '0.5';
             titol.style.textDecoration = 'line-through';
             tasquesCompletades.appendChild(tascaElement);
+
+            const dataTasca = new Date(tasca.data);
+            const mes = dataTasca.getMonth();
+            dades[Object.keys(dades)[mes]]++;
+            
         } else {
             tascaElement.style.order = tasca.prioritat === 'Alta' ? 1 : tasca.prioritat === 'Mitja' ? 2 : 3;
             tasquesPendents.appendChild(tascaElement);
         }
 
+        crearGrafic(dades);
     });
 }
