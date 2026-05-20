@@ -3,6 +3,7 @@ function pujarActivitats() {
     
     console.log('Pujant activitats...');
     const archiuJSON = document.getElementById('nom-fitxer').value;
+    
     fetch("../dades/" + archiuJSON)
         .then(resposta => resposta.json())
         .then(activitats => {

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tasques SYSTEM "tasques.dtd">
+<tasques>
+    <tasca>
+        <nom>Comprar pa</nom>
+        <descripcio>Comprar pa fresc a sa MG</descripcio>
+        <data>2024-06-15</data>
+        <categoria>
+            <nom>Alimentació</nom>
+            <color>#FF5733</color>
+        </categoria>
+        <prioritat>Alta</prioritat>
+    </tasca>
+    <tasca>
+        <nom>Fer sa compra setmanal</nom>
+        <descripcio>Fer la compra setmanal de productes de alimentació</descripcio>
+        <data>2024-03-16</data>
+        <categoria>
+            <nom>Alimentació</nom>
+            <color>#FF5733</color>
+        </categoria>
+        <prioritat>Mitjana</prioritat>
+    </tasca>
+    <tasca>
+        <nom>Fer net</nom>
+        <descripcio>Fer net la casa</descripcio>
+        <data>2024-12-17</data>
+        <categoria>
+            <nom>Neteja</nom>
+            <color>#33FF57</color>
+        </categoria>
+        <prioritat>Baixa</prioritat>
+    </tasca>
+    <tasca>
+        <nom>Fer exercici</nom>
+        <descripcio>Fer exercici físic</descripcio>
+        <data>2024-09-18</data>
+        <categoria>
+            <nom>Salut</nom>
+            <color>#3357FF</color>
+        </categoria>
+        <prioritat>Mitjana</prioritat>
+    </tasca>
+    <tasca>
+        <nom>Estudiar per a l'examen</nom>
+        <descripcio>Estudiar per a l'examen de matemàtiques</descripcio>
+        <data>2024-08-19</data>
+        <categoria>
+            <nom>Estudis</nom>
+            <color>#FF33A1</color>
+        </categoria>
+        <prioritat>Alta</prioritat>
+    </tasca>
+</tasques>
